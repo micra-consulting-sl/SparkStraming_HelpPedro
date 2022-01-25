@@ -1,8 +1,9 @@
-
+print("hola")
 import os
-os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-11-openjdk-amd64"
-os.environ["SPARK_HOME"] = "/content/spark-3.1.2-bin-hadoop3.2"
+os.environ["JAVA_HOME"] = "C:\Program Files\Java\jdk-11.0.9"
+os.environ["SPARK_HOME"] = "C:/Users/Chemagdlc/AppData/Local/Programs/Python/Python310/Lib/site-packages/pyspark"
 os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages io.delta:delta-core_2.12:0.8.0,org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2 --conf spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog pyspark-shell'
+os.environ["HADOOP_HOME"] = "C:/Users/Chemagdlc/AppData/Local/Programs/Python/Python310/Lib/site-packages/pyspark/hadoop-3.3.1-src"
 
 import findspark
 findspark.init()
